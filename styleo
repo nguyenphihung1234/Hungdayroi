@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+</head>
+
+<body>
+    <header>Title website</header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer" ></a>Home</li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer" ></a>CSS</li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer" ></a>HTML</li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer" ></a>Java</li>
+            </ul>
+        </nav>
+    </section>
+    <article>
+        <h1>Home</h1>
+        <p>This is a home page</p>
+    </article>
+    <footer>This is a footer</footer>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            background-color: aqua;
+            text-align: center;
+            font-size: 25px;
+            color:;
+            padding: 25px;
+        }
+        nav{
+            /*float:left;*/
+            /*width:30%;*/
+            height: 300px;
+            background: #fff;
+            padding: 20px;
+            margin-right: 50px;
+            margin-top: 10px;
+            margin-left: 0px;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        article{
+            /*float: left*/;
+            padding: 20px;
+            /*width: 70%;*/
+            background-color:rgb(159, 159, 207);
+            height: 300px;
+           /* margin: 0 0 0 100px;*/
+           margin-top: 1px;
+           margin-left: 90px;
+           margin-right: 1px;
+        }
+        footer{
+            background-color: aqua;(9, 57, 73);
+            padding: 10px;
+            text-align: center;
+            color: black;
+            margin-top: 300px;
+            /*font-size: 18px;*/
+        }
+        section::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        
+
+    </style>
+</body>
+</html>
