@@ -23,16 +23,13 @@
             margin: 0px;
             text-align: center;
         }
-
         a{
             color: #ffffff;
             text-decoration: none;
         }
-
         a:hover{
             color: #ffffff;
         }
-
         .header{
             background-image: url("images/bg-header.jpg");
             padding: 0px 0px 0px 0px;
@@ -41,7 +38,6 @@
             width: 100%;
             z-index: 50;
         }
-
         .nav{
             float: right;
             font-family: QuicksandBook, Helvetica, Arial, sans-serif;
