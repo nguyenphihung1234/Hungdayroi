@@ -5,23 +5,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
             loadVideo(this.value);
         }
     }
-    loadVideo("Đen vâu");
+    loadVideo("Sơn Tùng");
 });
 
-// Get the modal
 var modal = document.getElementById('myModal');
 
-//Get the <span> element that closes the modal
-var span = document.getElementsByClassName('close')[0];
+var span = document.getElementsByClassName("close")[0];
 
-var videoFrame = document.getElementsById("video-frame");
+var videoFrame = document.getElementById("video-frame");
 
-//when the user clicks on <span> (x), close the modal
 span.onclick = function() {
     closeVideo();
 }
 
-// When the user clicks anywhere outside of the modal,close it
 window.onclick = function(event) {
     if (event.target == modal) {
         closeVideo();
@@ -29,46 +25,44 @@ window.onclick = function(event) {
 }
 
 function loadVideo(keyword){
-    var YOUTUBE_API = "https://content.googleapis.com/youtube/v3/search?q=" + keyword +
-    "&type=video&maxResults=9&part=snippet&key=AIzaSyARxlO6YYNKSZqVHI10fHLBEKHSEn5kQs8";
+    var YOUTUBE_API = "https://content.googleapis.com/youtube/v3/search?q=" + keyword + "&type=video&maxResults=9&part=snippet&key= AIzaSyDKtqIwdRlz2LAFEhya4UWMGpmWPLPlUjI";
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", YOUTUBE_API,true);
+    xhr.open("GET", YOUTUBE_API, true);
     xhr.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-            // Parse ket qua tra ve thanh kieu json.
-            var reponseJson = JSON.parse(this.responseText);
+            var responseJson = JSON.parse(this.responseText);
             var htmlContent = "";
 
-            for (var i = 0; i < reponseJson.items.length; i++) {
-                if(reponseJson.items[i].id.kind == 'youtube#channel'){
+            for (var i = 0;i < responseJson.items.length; i++) {
+                if(responseJson.items[i].id.kind == 'youtube#channel'){
                     continue;
                 }
-            var videoId = reponseJson.items[i].id.videoId;
-            var videoTiltle = reponseJson.items[i].snippet.title;
-            var videoDescription = reponseJson.items[i].snippet.description;
-            var videoThumbnail = reponseJson.items[i].snippet.thumbnails.medium.url;
-            htmlContent += '<div class="video" onclick="showVideo(\''+ videoId + '\')">'
-             htmlContent += '<img src="' + videoThumbnail +'">'
-             htmlContent += '<div class="tiltle">' + videoId +'</div>'
-            htmlContent += '</div>'
-        }
+                var videoId = responseJson.items[i].id.videoId;
+                var videoTitle = responseJson.items[i].snippet.title;
+                var videoDescription = responseJson.items[i].snippet.description;
+                var videoThumbnail = responseJson.items[i].snippet.thumbnails.medium.url;
+                htmlContent += '<div class="video" onclick="showVideo(\'' + videoId + '\')">'
+                  htmlContent += '<img src="' + videoThumbnail + '">'
+                  htmlContent += '<div class="title">' + videoTitle + '</div>'
+                htmlContent += '</div>'
+            }
 
-        document.getElementById("list-video").innerHTML = htmlContent
-    } else if(this.readyState == 4) {
-        console.log("Fails");
-    }
-};
-xhr.send();
+            document.getElementById("list-video").innerHTML = htmlContent;
+        }else if(this.readyState == 4){
+            console.log("Fails");
+        }
+    };
+    xhr.send();
 }
 
 function closeVideo(){
     modal.style.display = "none";
-     videoFrame.src ="";
+      videoFrame.src = "";
 }
 
 function showVideo(videoId){
-    videoFrame.src = "https://ww.youtube.com/embed/" + videoId +"?autoplay=1";
+    videoFrame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
     setTimeout(function(){
         modal.style.display = "block";
-    },300);
+    }, 300);
 }
