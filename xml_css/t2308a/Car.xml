@@ -1,0 +1,24 @@
+
+<?xml-stylesheet href="Car.css" type="text/css"?>
+<Car>
+    <Title>BMW MOTORRAD</Title>
+    <Vehicle>
+        <Manufactures>BMW</Manufactures>
+        <Model>S 1000 RR</Model>
+        <Color>Light White/Racing blue metsllic/Racing red</Color>
+        <description>Color is associated with the identity of racing.Equipped with the M package to create a sporty.</description>
+        <Price>909.000.000 VND</Price>
+        <Location>Viet Nam</Location>
+        <Image src="s1000rr.jpg" />
+    </Vehicle>
+    
+    <Vehicle>
+        <Manufactures>BMW</Manufactures>
+        <Model>M 1000 RR</Model>
+        <Color>Light White/Racing blue metsllic/Racing red</Color>
+        <description>Color is associated with the identity of racing.Equipped with the M package to create a sporty.</description>
+        <Price>1.399.000.000 VND</Price>
+        <Location>Viet Nam</Location>
+        <Image src="s1000rr.jpg" />
+    </Vehicle>
+</Car>

@@ -1,0 +1,78 @@
+/* Car.css */
+Car {
+    display: block;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+Title {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+Vehicle {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: #afafaf;
+}
+
+Vehicle > Manufactures,
+Vehicle > Model,
+Vehicle > Color,
+Vehicle > description,
+Vehicle > Price,
+Vehicle > Location {
+    display: block;
+    margin: 5px 0;
+    font-style: italic; /* Làm cho chữ nghiêng */
+    
+}
+
+Vehicle > Manufactures::before {
+    content: "Manufacturer: ";
+    font-weight: bold;
+}
+
+Vehicle > Model::before {
+    content: "Model: ";
+    font-weight: bold;
+}
+
+Vehicle > Color::before {
+    content: "Color: ";
+    font-weight: bold;
+
+    
+}
+
+Vehicle > description::before {
+    content: "Description: ";
+    font-weight: bold;
+}
+
+Vehicle > Price::before {
+    content: "Price: ";
+    font-weight: bold;
+}
+
+Vehicle > Location::before {
+    content: "Location: ";
+    font-weight: bold;
+}
+
+Vehicle > Image {
+    display: block;
+    margin: 10px 0;
+}
+
+Vehicle > Image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000;
+}

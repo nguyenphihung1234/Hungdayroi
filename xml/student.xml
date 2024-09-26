@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Class>
+    <ClassInfo>
+        <ClassName>Computer Science 101</ClassName>
+        <ClassCode>CS101</ClassCode>
+        <Semester>Spring 2024</Semester>
+    </ClassInfo>
+    <Instructor>
+        <FirstName>John</FirstName>
+        <LastName>Doe</LastName>
+        <Email>john.doe@example.com</Email>
+        <OfficeHours>Monday 2-4pm, Wednesday 3-5pm</OfficeHours>
+    </Instructor>
+    <Students>
+        <Student>
+            <ID>1001</ID>
+            <FirstName>Jane</FirstName>
+            <LastName>Smith</LastName>
+            <Email>jane.smith@example.com</Email>
+            <Major>Computer Science</Major>
+        </Student>
+        <Student>
+            <ID>1002</ID>
+            <FirstName>Michael</FirstName>
+            <LastName>Johnson</LastName>
+            <Email>michael.johnson@example.com</Email>
+            <Major>Information Technology</Major>
+        </Student>
+    </Students>
+    <Schedule>
+        <Day>Monday</Day>
+        <Time>9:00 AM - 11:00 AM</Time>
+        <Room>Room 101</Room>
+    </Schedule>
+    <Schedule>
+        <Day>Wednesday</Day>
+        <Time>9:00 AM - 11:00 AM</Time>
+        <Room>Room 101</Room>
+    </Schedule>
+</Class>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="bookstore.xsl" type="text/xsl"?>
+<publisher>
+    <book>
+        <Title>Clean Code </Title>
+        <Author>Robert C.Martin</Author>
+        <Price>1000</Price>
+        <Year>2023</Year>
+    </book>
+    <book>
+        <Title> The Pragrammer Programmer </Title>
+        <Author>Andrew Hunt, David Thomas</Author>
+        <Price>1200</Price>
+        <Year>1999</Year>
+    </book>
+    <book>
+        <Title>Design Patterns </Title>
+        <Author>Erich Gamma ,Richard Helm, Ralp John V</Author>
+        <Price>1000</Price>
+        <Year>2023</Year>
+    </book>
+</publisher>
